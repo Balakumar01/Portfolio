@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balakumar Venkateswarlu - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-download {
+            background-color: var(--success);
+        }
+        
+        .btn-download:hover {
+            background-color: #219653;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-category {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-list i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content .date {
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .timeline-content ul {
+            padding-left: 20px;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .project-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .project-info p {
+            margin-bottom: 15px;
+            color: #666;
+            flex-grow: 1;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .project-tag {
+            background-color: #f1f1f1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+        
+        .project-link {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .project-link i {
+            margin-right: 5px;
+        }
+        
+        /* Project Counter */
+        .project-counter {
+            text-align: center;
+            margin: -20px 0 30px;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content,
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Balakumar <span>V</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Balakumar Venkateswarlu</h1>
+            <p>Data Analyst specializing in Business Intelligence, Data Visualization, and Process Automation</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Get In Touch</a>
+                <a href="#projects" class="btn btn-outline">View My Work</a>
+                <a href="https://raw.githubusercontent.com/Balakumar01/Portfolio/refs/heads/main/Balakumar%20Venkateswarlu%20Cv.pdf" class="btn btn-download" download><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated Data Analyst with extensive experience in transforming complex data into actionable insights. My expertise includes data visualization, process automation, and business intelligence solutions that drive efficiency and informed decision-making.</p>
+                    <p>With a strong background in mortgage processing and financial data analysis, I have successfully implemented automation solutions that significantly reduce processing time and improve accuracy across various organizations.</p>
+                    <p>My professional goal is to work in a firm with a professional work-driven environment where I can utilize and apply my knowledge and skills while contributing to organizational goals.</p>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+                <div class="about-image">
+                    <!-- Replace with your actual image path -->
+                    <img src="https://raw.githubusercontent.com/Balakumar01/Portfolio/refs/heads/main/new%20image.PNG" alt="Balakumar Venkateswarlu" class="profile-img" id="profile-picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced MS Excel</li>
+                        <li><i class="fas fa-check-circle"></i> Power BI</li>
+                        <li><i class="fas fa-check-circle"></i> Python</li>
+                        <li><i class="fas fa-check-circle"></i> SQL</li>
+                        <li><i class="fas fa-check-circle"></i> Excel with AI</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Problem-solving</li>
+                        <li><i class="fas fa-check-circle"></i> Communication</li>
+                        <li><i class="fas fa-check-circle"></i> Research</li>
+                        <li><i class="fas fa-check-circle"></i> Teamwork</li>
+                        <li><i class="fas fa-check-circle"></i> Critical thinking</li>
+                        <li><i class="fas fa-check-circle"></i> Training</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> AI Tools</li>
+                        <li><i class="fas fa-check-circle"></i> Python with AI</li>
+                        <li><i class="fas fa-check-circle"></i> VBA Macros</li>
+                        <li><i class="fas fa-check-circle"></i> ZohoDesk</li>
+                        <li><i class="fas fa-check-circle"></i> Vibe Coding</li>
+                        <li><i class="fas fa-check-circle"></i> Process Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Analyst</h3>
+                        <span class="date">Prudent Ai, Chennai | Apr 2023 - Present</span>
+                        <ul>
+                            <li>Preparing Business reports</li>
+                            <li>Power BI Dashboards development</li>
+                            <li>Data maintenance and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Ops Process Associate</h3>
+                        <span class="date">Prudent Ai, Chennai | Aug 2022 - Apr 2023</span>
+                        <ul>
+                            <li>Bank statement Automation</li>
+                            <li>Non Qualified mortgage (NQM) processing</li>
+                            
+                            <li>Process Trainer: Trained 12 batches in real-time client projects</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Loan Setup Analyst</h3>
+                        <span class="date">First Source Solutions, Chennai | Sep 2020 – Jan 2021</span>
+                        <ul>
+                            <li>Loan Setup: updating client information, requesting credit reports and tax transcripts</li>
+                            <li>Verifying income and assets as per AUS guidelines</li>
+                            <li>Mortgage Document Indexing Process and Auditing Process</li>
+                            <li>Underwriting Submission</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Process Associate</h3>
+                        <span class="date">First American India, Salem | Jan 2017 - Jun 2020</span>
+                        <ul>
+                            <li>Under Post Closing Team</li>
+                            <li>Queue Management, Quality Management and TAT Management</li>
+                            <li>Creating Release Documents</li>
+                            <li>US mortgage and assignments flow management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-counter" id="project-counter">Total Projects: <span id="project-count">9</span></div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Excel Merger Application" class="project-image">
+                    <div class="project-info">
+                        <h3>Excel Merger Application</h3>
+                        <p>A web-based tool that allows users to merge multiple Excel files into a single spreadsheet. The application features drag-and-drop functionality, column mapping, and data validation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">ExcelJS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/Excel_Merger" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://balakumar01.github.io/Excel_Merger/Excel_Merger.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="PDF Splitter Application" class="project-image">
+                    <div class="project-info">
+                        <h3>PDF Splitter Application</h3>
+                        <p>A browser-based tool to split PDF documents into multiple files. Users can select specific pages or split by size, with options to download individual pages or all splits as a ZIP file.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PDF.js</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/PDF_SPLITTER" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://balakumar01.github.io/PDF_SPLITTER/PDF_SPLITTER.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Descriptive Analysis Application" class="project-image">
+                    <div class="project-info">
+                        <h3>Descriptive Analysis Application</h3>
+                        <p>An interactive web application that performs statistical analysis on uploaded datasets. It generates summary statistics, visualizations, and insights to help users understand their data better.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Chart.js</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/Descripitive_Analysis" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://balakumar01.github.io/Descripitive_Analysis/descriptive.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1706&q=80" alt="Python Excel Formatter" class="project-image">
+                    <div class="project-info">
+                        <h3>Python Excel Formatter</h3>
+                        <p>Python script that automates the formatting of Excel sheets for operational workflows. Processes data, applies consistent formatting, and generates 50+ customized Excel outputs daily.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OpenPyXL</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/Python_" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80" alt="Auto Review Macro" class="project-image">
+                    <div class="project-info">
+                        <h3>Auto Review Macro</h3>
+                        <p>Excel macro that automates 50% of manual QC work. Analyzes data, creates summary sheets, applies conditional formatting, validates information, and generates pivot tables for data verification.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">VBA</span>
+                            <span class="project-tag">Excel</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Quality Control</span>
+                        </div>
+                        <div class="project-links">
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Auto Email System" class="project-image">
+                    <div class="project-info">
+                        <h3>Auto Email System</h3>
+                        <p>Macro that processes Zoho Desk reports, identifies missing data, highlights blanks, and automatically emails users about incomplete entries. Creates a consistent monitoring system for the team.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">VBA</span>
+                            <span class="project-tag">Outlook</span>
+                            <span class="project-tag">Zoho Desk</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Batch Script Functions" class="project-image">
+                    <div class="project-info">
+                        <h3>Batch Script Functions</h3>
+                        <p>Collection of batch scripts for automating various system tasks, file operations, and process workflows. Includes scripts for automated application closure and system maintenance.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Batch Script</span>
+                            <span class="project-tag">Windows</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">System Tasks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/Batch-Script" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Sales Dashboard" class="project-image">
+                    <div class="project-info">
+                        <h3>Sales Dashboard</h3>
+                        <p>Built 15+ interactive Power BI dashboard in organization covering operations,performance tracking and business insights.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">DAX</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Business Intelligence</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/Sales-Dashboard" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="SQL Sales Analysis" class="project-image">
+                    <div class="project-info">
+                        <h3>SQL Analysis</h3>
+                        <p>The objective is to practice SQL operations such as CREATE TABLE, INSERT, JOIN, GROUP BY, and filtering conditions. Students’ details like ID, Name, and Country Code are stored in one table, while another table contains Country Code and Country Name.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Business Insights</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Balakumar01/SQL/blob/main/SQL%20CODES" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>6369425306</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kbala7092@gmail.com</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>No.23, Lakshmipuram, Chrompet, Chennai - 600044</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Data Visualization with Power BI – Microsoft [Great Learning]</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Master Data Analytics in Excel – Microsoft [Great Learning]</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Six Sigma Yellow Belt – Sparen & Gewinn Consulting</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/balakumar-venkateswarlu-8b21b1145/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/me/notifications"><i class="fab fa-medium"></i></a>
+                <a href="https://github.com/Balakumar01"><i class="fab fa"></i-github"></i></a></a>
+           
+            </div>
+            </div>
+            <p>&copy Balakumar Venkateswarlu. All rights reserved.</ All rights reserved.</p>
+        </p>
+        </div>
+    </footer>
+
+    </footer>
+
+       <script>
+ <script>
+        // Simple form        // Simple form validation
+        const validation
+        const contactForm = document contactForm = document.querySelector.querySelector('.contact-form('.contact-form form');
+ form');
+        if        if (contact (contactForm)Form) {
+            {
+            contactForm.addEventListener(' contactForm.addEventListener('submit', functionsubmit', function(e)(e) {
+                e {
+                e.preventDefault();
+.preventDefault();
+                
+                               
+                const name const name = document = document.getElementById('.getElementById('name').name').value;
+value;
+                const email =                const email = document.getElementById('email document.getElementById('email').value').value;
+                const message;
+                const message = document = document.getElementById('.getElementById('message').message').value;
+value;
+                
+                               
+                if (name if (name && email && && email && message) message) {
+                    {
+                    alert(' alert('Thanks forThanks for your message your message! I! I will get will get back to you soon back to you soon.');
+                   .');
+                    this.reset();
+                this.reset();
+                } else } else {
+                    alert(' {
+                    alert('Please fillPlease fill in all in all fields.');
+ fields.');
+                }
+                }
+            });
+                   });
+        }
+        
+        // Add }
+        
+        // Add active class active class to navigation to navigation links on links on scroll
+ scroll
+        const        const sections = sections = document.querySelector document.querySelectorAll('All('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+       section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener window.addEventListener('scroll('scroll', function', function() {
+() {
+            let            let current = current = '';
+            
+            sections '';
+            
+            sections.forEach(section =>.forEach(section => {
+ {
+                const section                const sectionTop =Top = section.offsetTop section.offsetTop;
+               ;
+                const section const sectionHeight =Height = section.client section.clientHeight;
+Height;
+                
+                if (pageYOffset >= (section                
+                if (pageYOffset >= (sectionTop - 200Top - 200)) {
+)) {
+                    current                    current = section = section.getAttribute.getAttribute('id('id');
+                }
+            });
+            
+');
+                }
+                       nav });
+            
+            navLinks.forEachLinks.forEach(link => {
+(link => {
+                link                link.classList.remove.classList.remove('active('active');
+               ');
+                if ( if (link.getlink.getAttribute('href').Attribute('href').substringsubstring(1) === current) {
+                   (1) === current) {
+                    link.classList link.classList.add('.add('active');
+                }
+            });
+active');
+                }
+        });
+
+        //            });
+        });
+
+ Function to        // Function to upload upload profile picture
+        function profile picture
+        function uploadProfilePicture() uploadProfilePicture() {
+            {
+            const input const input = document.createElement(' = document.createElement('input');
+            inputinput');
+            input.type = 'file';
+           .type = 'file';
+ input.ac            input.accept = 'imagecept = 'image/*';
+/*';
+            
+                       
+            input.on input.onchangechange = function(event = function(event) {
+                const) {
+                const file = event.target file = event.target.files.files[0[0];
+               ];
+                if (file) if (file) {
+                    {
+                    const reader const reader = new = new FileReader FileReader();
+                    reader.onload =();
+                    reader.onload = function(e function(e) {
+                        document.getElementById(') {
+                        document.getElementById('profile-pprofile-picture').src = eicture').src = e.target.target.result;
+                    };
+.result;
+                    };
+                    reader.readAs                    reader.readAsDataURLDataURL(file);
+(file);
+                }
+            };
+                }
+            };
+            
+            input.click            
+            input.click();
+       ();
+        }
+
+        }
+
+        // Make // Make profile picture profile picture clickable clickable for upload for upload
+       
+        document.getElementById('profile document.getElementById('profile-picture').add-picture').addEventListener('click', uploadProfilePicture);
+EventListener('click', uploadProfilePicture);
+        document.getElementById('profile-p        document.getElementById('profile-picture').icture').style.cstyle.cursor =ursor = 'pointer';
+        'pointer';
+        document.getElementById document.getElementById('profile('profile-picture').title = '-picture').title = 'Click to upload yourClick to upload your photo';
+        
+        photo';
+        
+        // Resume download functionality // Resume download functionality
+        document.querySelector
+        document.querySelector('.('.btn-download').addbtn-download').addEventListener('click',EventListener('click', function(e) {
+ function(e) {
+            // The            // The download attribute in download attribute in the HTML the HTML should handle the download should handle the download
+           
+            // This // This is just is just a a fallback in case there's an issue
+ fallback in case there's an issue
+            if (!this            if (!this.get.getAttribute('Attribute('download'))download')) {
+                {
+                e.preventDefault e.preventDefault();
+                alert('();
+                alert('Please make sure yourPlease make resume file sure your resume file is is named "Balakumar named "Balakumar_Cv.pdf"_Cv.pdf" and placed in the same directory and placed in the as this same directory as this HTML file.');
+            HTML file.');
+            }
+        }
+        });
+        
+ });
+        
+        //        // Count projects Count projects dynamically
+ dynamically
+        document.addEventListener('DOMContent        document.addEventListener('Loaded',DOMContentLoaded', function() function() {
+            {
+            const projectCards = document.querySelector const projectCards = document.querySelectorAll('.project-cardAll('.project-card');
+           ');
+            document.getElementById('project-count document.getElementById('project').-count').textContenttextContent = projectCards.length;
+        = projectCards.length;
+        });
+    </script });
+    </script>
+</>
+</body>
+body>
+
+</html>
+
+
+
