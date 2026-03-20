@@ -3,1089 +3,703 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balakumar Venkateswarlu - Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Balakumar Venkateswarlu · Data Analyst</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Global Styles */
-        :root {
-            --primary: #3498db;
-            --secondary: #2c3e50;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --success: #27ae60;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        
-        html {
+
+        body {
+            background-color: #f4f7fb;
+            color: #1e293b;
+            line-height: 1.5;
             scroll-behavior: smooth;
         }
-        
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--primary);
-            transition: color 0.3s;
-        }
-        
-        a:hover {
-            color: var(--accent);
-        }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-        
-        .btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .btn-download {
-            background-color: var(--success);
-        }
-        
-        .btn-download:hover {
-            background-color: #219653;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-            color: var(--secondary);
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary);
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-        
-        .card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        
-        /* Header Styles */
+
+        /* header / nav */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 50;
         }
-        
-        nav {
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            height: 70px;
         }
-        
+
         .logo {
+            font-weight: 700;
             font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--secondary);
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        
-        .logo span {
-            color: var(--primary);
-        }
-        
+
         .nav-links {
             display: flex;
+            gap: 2rem;
             list-style: none;
         }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
+
         .nav-links a {
-            color: #333;
+            text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            color: #334155;
+            transition: color 0.2s;
+            font-size: 0.95rem;
         }
-        
+
         .nav-links a:hover {
-            color: var(--primary);
+            color: #2563eb;
         }
-        
-        /* Hero Section */
-        .hero {
-            padding-top: 150px;
-            padding-bottom: 100px;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        /* buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: white;
+            border: 1px solid #cbd5e1;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1e293b;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            border-color: #2563eb;
             color: white;
+            box-shadow: 0 8px 18px -6px #2563eb70;
         }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
         }
-        
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+
+        .btn-outline {
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            background: white;
         }
-        
-        .hero-buttons {
+
+        .btn-outline:hover {
+            background: #eef2ff;
+        }
+
+        /* hero */
+        .hero {
+            padding: 60px 0 40px;
+        }
+
+        .hero-grid {
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
+            align-items: center;
+            gap: 3rem;
             flex-wrap: wrap;
         }
-        
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+
+        .hero-content {
+            flex: 2;
+            min-width: 300px;
         }
-        
-        .about-text {
+
+        .hero-badge {
+            background: #dbeafe;
+            color: #1e40af;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-highlight {
+            color: #2563eb;
+            border-bottom: 3px solid #bfdbfe;
+        }
+
+        .hero-para {
+            font-size: 1.1rem;
+            color: #475569;
+            margin: 20px 0 25px;
+            max-width: 550px;
+        }
+
+        .hero-image {
             flex: 1;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .profile-img {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-        }
-        
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .skill-category {
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 20px;
+            min-width: 250px;
             text-align: center;
         }
-        
-        .skill-list {
-            list-style: none;
+
+        .profile-frame {
+            background: white;
+            border-radius: 30px;
+            padding: 10px;
+            box-shadow: 0 25px 40px -15px #94a3b8;
+            display: inline-block;
         }
-        
-        .skill-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .skill-list i {
-            color: var(--primary);
-            margin-right: 10px;
-        }
-        
-        /* Experience Section */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--primary);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-        
-        .timeline-content {
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .timeline-content h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        
-        .timeline-content .date {
-            color: var(--secondary);
-            font-weight: bold;
-            margin-bottom: 15px;
+
+        .profile-frame img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 24px;
             display: block;
         }
-        
-        .timeline-content ul {
-            padding-left: 20px;
+
+        /* section title */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
-        .timeline-content li {
+
+        .section-title i {
+            color: #2563eb;
+            background: #e0e7ff;
+            padding: 8px;
+            border-radius: 14px;
+        }
+
+        /* summary card */
+        .summary-card {
+            background: white;
+            border-radius: 30px;
+            padding: 28px 30px;
+            box-shadow: 0 10px 30px -10px #cbd5e180;
+            margin: 40px 0;
+            border: 1px solid #e9eef3;
+        }
+
+        .summary-card p {
+            font-size: 1.1rem;
+            color: #334155;
+        }
+
+        /* skills grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .skill-panel {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 6px 18px #e2e8f0;
+            border: 1px solid #f0f4f9;
+        }
+
+        .skill-panel h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #0f172a;
+        }
+
+        .skill-panel ul {
+            list-style: none;
+        }
+
+        .skill-panel li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-panel i {
+            color: #2563eb;
+            font-size: 0.9rem;
+            width: 18px;
+        }
+
+        /* timeline (experience) */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-item {
+            background: white;
+            border-radius: 24px;
+            padding: 24px 28px;
+            border-left: 6px solid #2563eb;
+            box-shadow: 0 8px 18px #dee7f2;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #2563eb;
+            margin: 6px 0 2px;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            background: #f1f5f9;
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin: 10px 0 12px;
+            font-weight: 500;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            color: #334155;
+        }
+
+        .timeline-item li {
             margin-bottom: 8px;
         }
-        
-        /* Projects Section */
+
+        /* projects grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 24px;
+            margin: 30px 0;
         }
-        
+
         .project-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            background: white;
+            border-radius: 24px;
+            padding: 22px;
+            box-shadow: 0 12px 26px -10px #b9c7da;
+            transition: transform 0.15s ease;
+            border: 1px solid #eef2f6;
             display: flex;
             flex-direction: column;
         }
-        
+
         .project-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
-        
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 3px solid var(--primary);
-        }
-        
-        .project-info {
-            padding: 20px;
-            flex-grow: 1;
+
+        .project-icon {
+            background: #dbeafe;
+            width: 48px;
+            height: 48px;
+            border-radius: 18px;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #1e40af;
+            font-size: 1.4rem;
         }
-        
-        .project-info h3 {
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
             margin-bottom: 10px;
-            color: var(--secondary);
         }
-        
-        .project-info p {
-            margin-bottom: 15px;
-            color: #666;
-            flex-grow: 1;
+
+        .project-card p {
+            color: #475569;
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+            line-height: 1.5;
+            flex: 1;
         }
-        
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            gap: 8px;
+            margin: 10px 0 15px;
         }
-        
-        .project-tag {
-            background-color: #f1f1f1;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 10px;
-            margin-bottom: 10px;
+
+        .tag {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
         }
-        
+
         .project-links {
             display: flex;
-            gap: 15px;
-            margin-top: auto;
+            gap: 18px;
+            margin-top: 8px;
         }
-        
-        .project-link {
+
+        .project-links a {
+            color: #2563eb;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 500;
             display: flex;
             align-items: center;
-            color: var(--primary);
-            font-weight: 500;
+            gap: 6px;
         }
-        
-        .project-link i {
-            margin-right: 5px;
+
+        /* achievements / certs */
+        .achievement-banner {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 6px 20px #e9edf3;
         }
-        
-        /* Project Counter */
-        .project-counter {
-            text-align: center;
-            margin: -20px 0 30px;
-            font-size: 1.2rem;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-        
-        /* Contact Section */
-        .contact-content {
+
+        .mini-badge {
             display: flex;
-            gap: 50px;
+            flex-wrap: wrap;
+            gap: 16px 30px;
+            margin-top: 20px;
         }
-        
+
+        .mini-badge span {
+            background: #f1f4f9;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .mini-badge i {
+            color: #2563eb;
+            margin-right: 6px;
+        }
+
+        /* contact row */
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            background: #0f172a;
+            border-radius: 40px;
+            padding: 40px;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
         .contact-info {
-            flex: 1;
-        }
-        
-        .contact-info-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 25px;
+            flex-direction: column;
+            gap: 15px;
         }
-        
-        .contact-info-item i {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-right: 15px;
-            width: 30px;
-            text-align: center;
+
+        .contact-info div i {
+            width: 28px;
+            color: #90b4f8;
         }
-        
-        .contact-form {
-            flex: 1;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--secondary);
+
+        .contact-info a {
             color: white;
-            padding: 40px 0;
-            text-align: center;
+            text-decoration: none;
+            border-bottom: 1px dotted #5f7fb9;
         }
-        
-        .social-links {
-            margin-bottom: 20px;
+
+        .footer-social {
+            display: flex;
+            gap: 25px;
+            font-size: 1.4rem;
         }
-        
-        .social-links a {
+        .footer-social a {
             color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
         }
-        
-        .social-links a:hover {
-            color: var(--primary);
+
+        hr {
+            border: 1px solid #eef2f6;
+            margin: 30px 0;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .about-content,
-            .contact-content {
-                flex-direction: column;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+
+        /* small */
+        @media (max-width: 700px) {
+            .hero-grid { flex-direction: column-reverse; }
+            .navbar .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
-</head>
+</hEad>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Balakumar <span>V</span></div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="container navbar">
+            <div class="logo">Balakumar V.</div>
+            <ul class="nav-links">
+                <li><a href="#summary">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Balakumar Venkateswarlu</h1>
-            <p>Data Analyst specializing in Business Intelligence, Data Visualization, and Process Automation</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn">Get In Touch</a>
-                <a href="#projects" class="btn btn-outline">View My Work</a>
-                <a href="https://raw.githubusercontent.com/Balakumar01/Portfolio/refs/heads/main/Balakumar%20Venkateswarlu%20Cv.pdf" class="btn btn-download" download><i class="fas fa-download"></i> Download Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a dedicated Data Analyst with extensive experience in transforming complex data into actionable insights. My expertise includes data visualization, process automation, and business intelligence solutions that drive efficiency and informed decision-making.</p>
-                    <p>With a strong background in mortgage processing and financial data analysis, I have successfully implemented automation solutions that significantly reduce processing time and improve accuracy across various organizations.</p>
-                    <p>My professional goal is to work in a firm with a professional work-driven environment where I can utilize and apply my knowledge and skills while contributing to organizational goals.</p>
-                    <a href="#contact" class="btn">Contact Me</a>
+    <main>
+        <!-- HERO section (matches CV details) -->
+        <div class="container hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge"><i class="fas fa-chart-line" style="margin-right:6px;"></i>Business Data Analyst</span>
+                    <h1>Balakumar Venkateswarlu</h1>
+                    <div class="hero-para">
+                        <i class="fas fa-map-pin" style="color:#2563eb; margin-right:6px;"></i> Chennai, India · +91 6369425306
+                    </div>
+                    <p class="hero-para">3+ years in business data analysis, reporting & process automation. Power BI, SQL, Advanced Excel. I turn data into decisions.</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary"><i class="far fa-comment"></i>Hire me</a>
+                        <a href="https://github.com/Balakumar01/Portfolio/raw/main/Balakumar%20Venkateswarlu%20Cv.pdf" class="btn btn-outline" download><i class="fas fa-download"></i>Resume PDF</a>
+                        <a href="https://www.linkedin.com/in/balakumar-venkateswarlu-8b21b1145/" class="btn" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <!-- Replace with your actual image path -->
-                    <img src="https://raw.githubusercontent.com/Balakumar01/Portfolio/refs/heads/main/new%20image.PNG" alt="Balakumar Venkateswarlu" class="profile-img" id="profile-picture">
+                <div class="hero-image">
+                    <div class="profile-frame">
+                        <!-- actual profile image from CV repo (same as your instruction) -->
+                        <img src="https://raw.githubusercontent.com/Balakumar01/Portfolio/refs/heads/main/new%20image.PNG" alt="Balakumar Venkateswarlu" id="profile-pic" style="cursor:pointer;" title="Click to change (demo)">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> Data Visualization</li>
-                        <li><i class="fas fa-check-circle"></i> Advanced MS Excel</li>
-                        <li><i class="fas fa-check-circle"></i> Power BI</li>
-                        <li><i class="fas fa-check-circle"></i> Python</li>
-                        <li><i class="fas fa-check-circle"></i> SQL</li>
-                        <li><i class="fas fa-check-circle"></i> Excel with AI</li>
+        <!-- SUMMARY (professional summary from CV) -->
+        <div class="container" id="summary">
+            <div class="summary-card">
+                <h2 class="section-title"><i class="fas fa-user-alt"></i>Professional Summary</h2>
+                <p>Business Analyst with <strong>3+ years</strong> of experience in business data analysis, reporting, and process automation. Skilled in gathering requirements, analyzing operational data, and building dashboards using Power BI, SQL, and Advanced Excel. Proven ability to identify business problems, improve processes, and deliver data-driven insights for better decision making.</p>
+            </div>
+        </div>
+
+        <!-- SKILLS :: exactly as CV: Business/Technical/Domain + Soft -->
+        <div class="container" id="skills">
+            <h2 class="section-title"><i class="fas fa-code"></i>Core skills</h2>
+            <div class="skills-grid">
+                <div class="skill-panel">
+                    <h3><i class="fas fa-briefcase"></i>Business Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-circle"></i>Business Analysis</li>
+                        <li><i class="fas fa-circle"></i>Requirement Gathering</li>
+                        <li><i class="fas fa-circle"></i>Stakeholder Management</li>
+                        <li><i class="fas fa-circle"></i>Process Improvement</li>
+                        <li><i class="fas fa-circle"></i>Operational Reporting</li>
                     </ul>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> Problem-solving</li>
-                        <li><i class="fas fa-check-circle"></i> Communication</li>
-                        <li><i class="fas fa-check-circle"></i> Research</li>
-                        <li><i class="fas fa-check-circle"></i> Teamwork</li>
-                        <li><i class="fas fa-check-circle"></i> Critical thinking</li>
-                        <li><i class="fas fa-check-circle"></i> Training</li>
+                <div class="skill-panel">
+                    <h3><i class="fas fa-laptop"></i>Technical Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-circle"></i>Power BI · Data Viz</li>
+                        <li><i class="fas fa-circle"></i>Advanced Excel · VBA</li>
+                        <li><i class="fas fa-circle"></i>Oracle SQL</li>
+                        <li><i class="fas fa-circle"></i>Python (basics)</li>
+                        <li><i class="fas fa-circle"></i>VBA Macros · Automation</li>
                     </ul>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> AI Tools</li>
-                        <li><i class="fas fa-check-circle"></i> Python with AI</li>
-                        <li><i class="fas fa-check-circle"></i> VBA Macros</li>
-                        <li><i class="fas fa-check-circle"></i> ZohoDesk</li>
-                        <li><i class="fas fa-check-circle"></i> Vibe Coding</li>
-                        <li><i class="fas fa-check-circle"></i> Process Automation</li>
+                <div class="skill-panel">
+                    <h3><i class="fas fa-chart-pie"></i>Domain Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-circle"></i>Process Automation</li>
+                        <li><i class="fas fa-circle"></i>Quality Management</li>
+                        <li><i class="fas fa-circle"></i>TAT / Queue Management</li>
+                        <li><i class="fas fa-circle"></i>Training & Documentation</li>
+                        <li><i class="fas fa-circle"></i>Mortgage / NQM</li>
+                    </ul>
+                </div>
+                <div class="skill-panel">
+                    <h3><i class="fas fa-lightbulb"></i>Soft Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-circle"></i>Problem Solving</li>
+                        <li><i class="fas fa-circle"></i>Communication</li>
+                        <li><i class="fas fa-circle"></i>Critical Thinking</li>
+                        <li><i class="fas fa-circle"></i>Team Collaboration</li>
+                        <li><i class="fas fa-circle"></i>Training & Mentoring</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+        <!-- EXPERIENCE (exact roles from CV) -->
+        <div class="container" id="experience">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i>Work experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Data Analyst</h3>
-                        <span class="date">Prudent Ai, Chennai | Apr 2023 - Present</span>
-                        <ul>
-                            <li>Preparing Business reports</li>
-                            <li>Power BI Dashboards development</li>
-                            <li>Data maintenance and optimization</li>
-                        </ul>
-                    </div>
+                    <h3>Business Analyst / Data Analyst</h3>
+                    <div class="company">Prudent AI · Chennai</div>
+                    <div class="date">Apr 2023 – Oct 2025</div>
+                    <ul>
+                        <li>Gathered business requirements & translated into reporting solutions.</li>
+                        <li>Developed Power BI dashboards to track KPIs and performance metrics.</li>
+                        <li>Performed descriptive & exploratory data analysis for insights.</li>
+                        <li>Automated reporting using Excel VBA and macros.</li>
+                        <li>Collaborated on process improvement and automation.</li>
+                    </ul>
                 </div>
-                
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Ops Process Associate</h3>
-                        <span class="date">Prudent Ai, Chennai | Aug 2022 - Apr 2023</span>
-                        <ul>
-                            <li>Bank statement Automation</li>
-                            <li>Non Qualified mortgage (NQM) processing</li>
-                            
-                            <li>Process Trainer: Trained 12 batches in real-time client projects</li>
-                        </ul>
-                    </div>
+                    <h3>Production Support Analyst</h3>
+                    <div class="company">Prudent AI · Chennai</div>
+                    <div class="date">Aug 2022 – Apr 2023</div>
+                    <ul>
+                        <li>Automated bank statement workflows using Excel automation.</li>
+                        <li>Performed QC validation for NQM (Non‑QM) processing.</li>
+                        <li>Monitored operational metrics and generated reports.</li>
+                        <li>Conducted training sessions and created documentation.</li>
+                    </ul>
                 </div>
-                
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Senior Loan Setup Analyst</h3>
-                        <span class="date">First Source Solutions, Chennai | Sep 2020 – Jan 2021</span>
-                        <ul>
-                            <li>Loan Setup: updating client information, requesting credit reports and tax transcripts</li>
-                            <li>Verifying income and assets as per AUS guidelines</li>
-                            <li>Mortgage Document Indexing Process and Auditing Process</li>
-                            <li>Underwriting Submission</li>
-                        </ul>
-                    </div>
+                    <h3>Senior Loan Setup Analyst</h3>
+                    <div class="company">First Source Solutions · Chennai</div>
+                    <div class="date">Sep 2020 – Jan 2021</div>
+                    <ul>
+                        <li>Managed loan setup and borrower data validation.</li>
+                        <li>Verified financial documents, income, and credit reports.</li>
+                        <li>Ensured compliance with underwriting guidelines.</li>
+                    </ul>
                 </div>
-                
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Process Associate</h3>
-                        <span class="date">First American India, Salem | Jan 2017 - Jun 2020</span>
-                        <ul>
-                            <li>Under Post Closing Team</li>
-                            <li>Queue Management, Quality Management and TAT Management</li>
-                            <li>Creating Release Documents</li>
-                            <li>US mortgage and assignments flow management</li>
-                        </ul>
-                    </div>
+                    <h3>Process Associate – Post Closing</h3>
+                    <div class="company">First American India · Salem</div>
+                    <div class="date">Jan 2017 – Jun 2020</div>
+                    <ul>
+                        <li>Managed post‑closing mortgage documentation workflows.</li>
+                        <li>Ensured TAT adherence & performed quality checks.</li>
+                        <li>Document indexing and operational support.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project-counter" id="project-counter">Total Projects: <span id="project-count">9</span></div>
+        <!-- PROJECTS (full list from CV page 2) with icons & matching descriptions -->
+        <div class="container" id="projects">
+            <h2 class="section-title"><i class="fas fa-code-branch"></i>Key projects & utilities</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Excel Merger Application" class="project-image">
-                    <div class="project-info">
-                        <h3>Excel Merger Application</h3>
-                        <p>A web-based tool that allows users to merge multiple Excel files into a single spreadsheet. The application features drag-and-drop functionality, column mapping, and data validation.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">ExcelJS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Balakumar01/Excel_Merger" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://balakumar01.github.io/Excel_Merger/Excel_Merger.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-file-excel"></i></div><h3>Mortgage QC Automation</h3><p>Reduced review time by 10 minutes per file using Excel macros (VBA). Automated validation for mortgage files.</p><div class="project-tags"><span class="tag">VBA</span><span class="tag">Excel</span><span class="tag">QC</span></div><div class="project-links"><a href="#"><i class="fab fa-github"></i> Code</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-chart-pie"></i></div><h3>Zoho Desk Reporting</h3><p>Built automated reporting from Zoho Desk for real‑time insights on ticket metrics and team performance.</p><div class="project-tags"><span class="tag">Zoho</span><span class="tag">Excel</span><span class="tag">automation</span></div><div class="project-links"><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-dashboard"></i></div><h3>Power BI KPI Dashboards</h3><p>Developed interactive dashboards tracking ops KPIs, TAT, and productivity for leadership reviews.</p><div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span></div><div class="project-links"><a href="#"><i class="fas fa-chart-simple"></i> View</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-database"></i></div><h3>SQL Sales Analysis</h3><p>Created database & queries for regional performance insights (JOINs, GROUP BY, filters).</p><div class="project-tags"><span class="tag">SQL</span><span class="tag">MySQL</span></div><div class="project-links"><a href="https://github.com/Balakumar01/SQL/blob/main/SQL%20CODES"><i class="fab fa-github"></i> Scripts</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-robot"></i></div><h3>AI Reporting Tool</h3><p>Reduced monthly effort by 6 hours by automating data consolidation with Python & Excel.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">OpenPyXL</span></div><div class="project-links"><a href="https://github.com/Balakumar01/Python_"><i class="fab fa-github"></i> code</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-cut"></i></div><h3>PDF splitter / merger</h3><p>Built browser‑based PDF splitter & merger using JavaScript (PDF.js). Internal utility tool.</p><div class="project-tags"><span class="tag">JavaScript</span><span class="tag">PDF.js</span></div><div class="project-links"><a href="https://balakumar01.github.io/PDF_SPLITTER/PDF_SPLITTER.html"><i class="fas fa-external-link-alt"></i> Live</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-file-signature"></i></div><h3>Excel merger application</h3><p>Drag‑drop multiple Excel files, merge columns, mapping. Built with ExcelJS.</p><div class="project-tags"><span class="tag">JS</span><span class="tag">ExcelJS</span></div><div class="project-links"><a href="https://balakumar01.github.io/Excel_Merger/Excel_Merger.html"><i class="fas fa-external-link-alt"></i> try</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-chart-line"></i></div><h3>Descriptive analysis app</h3><p>Interactive stats (mean, median, charts) from uploaded CSV. built with Chart.js.</p><div class="project-tags"><span class="tag">JS</span><span class="tag">Chart.js</span></div><div class="project-links"><a href="https://balakumar01.github.io/Descripitive_Analysis/descriptive.html"><i class="fas fa-external-link-alt"></i> demo</a></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-envelope-open-text"></i></div><h3>Auto email system (VBA)</h3><p>Macro reads Zoho Desk report, highlights blanks & auto‑emails users about missing entries.</p><div class="project-tags"><span class="tag">VBA</span><span class="tag">Outlook</span></div><div class="project-links"></div></div>
+                <div class="project-card"><div class="project-icon"><i class="fas fa-terminal"></i></div><h3>Batch script utilities</h3><p>Collection of batch scripts for task automation & system maintenance.</p><div class="project-tags"><span class="tag">batch</span></div><div class="project-links"><a href="https://github.com/Balakumar01/Batch-Script"><i class="fab fa-github"></i> repo</a></div></div>
+            </div>
+            <div style="text-align: right; opacity:0.7; margin-top:-10px">Total projects displayed: 10+ (including internal tools)</div>
+        </div>
+
+        <!-- ACHIEVEMENTS & CERTIFICATIONS (from CV) -->
+        <div class="container">
+            <div class="achievement-banner">
+                <h2 class="section-title" style="margin-top:-0.5rem"><i class="fas fa-award"></i>Highlights & credentials</h2>
+                <div style="display:flex; flex-wrap:wrap; gap:30px;">
+                    <div style="min-width:200px">
+                        <h4 style="margin-bottom:10px;"><i class="fas fa-certificate" style="color:#2563eb;"></i> Certifications</h4>
+                        <ul style="list-style:none;">
+                            <li>✔ Data Visualization with Power BI – Microsoft (GL)</li>
+                            <li>✔ Master Data Analytics in Excel – Microsoft (GL)</li>
+                            <li>✔ Six Sigma Yellow Belt – Sparen & Gewinn</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom:10px;"><i class="fas fa-trophy"></i> Achievements</h4>
+                        <div class="mini-badge">
+                            <span><i class="fas fa-medal"></i> Best Employee</span>
+                            <span><i class="fas fa-chalkboard-user"></i> Trainer (Prudent AI)</span>
+                            <span><i class="fas fa-crown"></i> Manager of the Day</span>
+                            <span><i class="fas fa-users"></i> Guest speaker @ Rotary</span>
+                            <span><i class="fas fa-star"></i> 1st Place GD (college)</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="PDF Splitter Application" class="project-image">
-                    <div class="project-info">
-                        <h3>PDF Splitter Application</h3>
-                        <p>A browser-based tool to split PDF documents into multiple files. Users can select specific pages or split by size, with options to download individual pages or all splits as a ZIP file.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">PDF.js</span>
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Balakumar01/PDF_SPLITTER" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://balakumar01.github.io/PDF_SPLITTER/PDF_SPLITTER.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Descriptive Analysis Application" class="project-image">
-                    <div class="project-info">
-                        <h3>Descriptive Analysis Application</h3>
-                        <p>An interactive web application that performs statistical analysis on uploaded datasets. It generates summary statistics, visualizations, and insights to help users understand their data better.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Chart.js</span>
-                            <span class="project-tag">Data Analysis</span>
-                            <span class="project-tag">Visualization</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Balakumar01/Descripitive_Analysis" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://balakumar01.github.io/Descripitive_Analysis/descriptive.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1706&q=80" alt="Python Excel Formatter" class="project-image">
-                    <div class="project-info">
-                        <h3>Python Excel Formatter</h3>
-                        <p>Python script that automates the formatting of Excel sheets for operational workflows. Processes data, applies consistent formatting, and generates 50+ customized Excel outputs daily.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">OpenPyXL</span>
-                            <span class="project-tag">Pandas</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Balakumar01/Python_" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80" alt="Auto Review Macro" class="project-image">
-                    <div class="project-info">
-                        <h3>Auto Review Macro</h3>
-                        <p>Excel macro that automates 50% of manual QC work. Analyzes data, creates summary sheets, applies conditional formatting, validates information, and generates pivot tables for data verification.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">VBA</span>
-                            <span class="project-tag">Excel</span>
-                            <span class="project-tag">Automation</span>
-                            <span class="project-tag">Quality Control</span>
-                        </div>
-                        <div class="project-links">
-                           
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Auto Email System" class="project-image">
-                    <div class="project-info">
-                        <h3>Auto Email System</h3>
-                        <p>Macro that processes Zoho Desk reports, identifies missing data, highlights blanks, and automatically emails users about incomplete entries. Creates a consistent monitoring system for the team.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">VBA</span>
-                            <span class="project-tag">Outlook</span>
-                            <span class="project-tag">Zoho Desk</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <div class="project-links">
-                           
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 7 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Batch Script Functions" class="project-image">
-                    <div class="project-info">
-                        <h3>Batch Script Functions</h3>
-                        <p>Collection of batch scripts for automating various system tasks, file operations, and process workflows. Includes scripts for automated application closure and system maintenance.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Batch Script</span>
-                            <span class="project-tag">Windows</span>
-                            <span class="project-tag">Automation</span>
-                            <span class="project-tag">System Tasks</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Balakumar01/Batch-Script" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 8 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Sales Dashboard" class="project-image">
-                    <div class="project-info">
-                        <h3>Sales Dashboard</h3>
-                        <p>Built 15+ interactive Power BI dashboard in organization covering operations,performance tracking and business insights.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Power BI</span>
-                            <span class="project-tag">DAX</span>
-                            <span class="project-tag">Data Visualization</span>
-                            <span class="project-tag">Business Intelligence</span>
-                        </div>
-                        <div class="project-links">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 9 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="SQL Sales Analysis" class="project-image">
-                    <div class="project-info">
-                        <h3>SQL Analysis</h3>
-                        <p>The objective is to practice SQL operations such as CREATE TABLE, INSERT, JOIN, GROUP BY, and filtering conditions. Students’ details like ID, Name, and Country Code are stored in one table, while another table contains Country Code and Country Name.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">SQL</span>
-                            <span class="project-tag">Data Analysis</span>
-                            <span class="project-tag">MySQL</span>
-                            <span class="project-tag">Business Insights</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Balakumar01/SQL/blob/main/SQL%20CODES" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
+                <hr>
+                <div><i class="fas fa-graduation-cap"></i> <strong>BCA</strong> – Bharathiyar University · Diploma in Production Engineering · SSLC</div>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
+        <!-- CONTACT (exact phone/email/address) -->
+        <div class="container" id="contact">
+            <div class="contact-row">
                 <div class="contact-info">
-                    <div class="contact-info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>6369425306</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>kbala7092@gmail.com</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>No.23, Lakshmipuram, Chrompet, Chennai - 600044</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Data Visualization with Power BI – Microsoft [Great Learning]</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Master Data Analytics in Excel – Microsoft [Great Learning]</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Six Sigma Yellow Belt – Sparen & Gewinn Consulting</span>
-                    </div>
+                    <div><i class="fas fa-phone-alt"></i> +91 6369425306</div>
+                    <div><i class="fas fa-envelope"></i> <a href="mailto:kbalal7092@gmail.com">kbalal7092@gmail.com</a></div>
+                    <div><i class="fas fa-map-marker-alt"></i> No.23, Lakshmipuram, Chrompet, Chennai – 600044</div>
+                    <div><i class="fas fa-globe"></i> <a href="https://github.com/Balakumar01" target="_blank">github.com/Balakumar01</a></div>
                 </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/balakumar-venkateswarlu-8b21b1145/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://medium.com/me/notifications"><i class="fab fa-medium"></i></a>
+                    <a href="https://github.com/Balakumar01"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/balakumar-venkateswarlu-8b21b1145/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://medium.com/me/notifications"><i class="fab fa-medium"></i></a>
-                <a href="https://github.com/Balakumar01"><i class="fab fa"></i-github"></i></a></a>
-            </div>
-            </div>
-            <p>Balakumar Venkateswarlu. All rights reserved.</ All rights reserved.</p>
+        <!-- small footer -->
+        <div style="text-align:center; padding:30px 0 20px; color:#6a7a8e;">
+            <i class="fas fa-crown" style="opacity:0.5;"></i> Balakumar Venkateswarlu – Data Analyst · based on official CV
         </div>
-    </footer>
-    </footer>
-       <script>
- <script>
-        // Simple form        // Simple form validation
-        const validation
-        const contactForm = document contactForm = document.querySelector.querySelector('.contact-form('.contact-form form');
- form');
-        if        if (contact (contactForm)Form) {
-            {
-            contactForm.addEventListener(' contactForm.addEventListener('submit', functionsubmit', function(e)(e) {
-                e {
-                e.preventDefault();
-.preventDefault();
-                
-                               
-                const name const name = document = document.getElementById('.getElementById('name').name').value;
-value;
-                const email =                const email = document.getElementById('email document.getElementById('email').value').value;
-                const message;
-                const message = document = document.getElementById('.getElementById('message').message').value;
-value;
-                
-                               
-                if (name if (name && email && && email && message) message) {
-                    {
-                    alert(' alert('Thanks forThanks for your message your message! I! I will get will get back to you soon back to you soon.');
-                   .');
-                    this.reset();
-                this.reset();
-                } else } else {
-                    alert(' {
-                    alert('Please fillPlease fill in all in all fields.');
- fields.');
-                }
-                }
-            });
-                   });
-        }
-        
-        // Add }
-        
-        // Add active class active class to navigation to navigation links on links on scroll
- scroll
-        const        const sections = sections = document.querySelector document.querySelectorAll('All('section');
-        const navLinks = document.querySelectorAll('.nav-links a');
-        
-       section');
-        const navLinks = document.querySelectorAll('.nav-links a');
-        
-        window.addEventListener window.addEventListener('scroll('scroll', function', function() {
-() {
-            let            let current = current = '';
-            
-            sections '';
-            
-            sections.forEach(section =>.forEach(section => {
- {
-                const section                const sectionTop =Top = section.offsetTop section.offsetTop;
-               ;
-                const section const sectionHeight =Height = section.client section.clientHeight;
-Height;
-                
-                if (pageYOffset >= (section                
-                if (pageYOffset >= (sectionTop - 200Top - 200)) {
-)) {
-                    current                    current = section = section.getAttribute.getAttribute('id('id');
-                }
-            });
-            
-');
-                }
-                       nav });
-            
-            navLinks.forEachLinks.forEach(link => {
-(link => {
-                link                link.classList.remove.classList.remove('active('active');
-               ');
-                if ( if (link.getlink.getAttribute('href').Attribute('href').substringsubstring(1) === current) {
-                   (1) === current) {
-                    link.classList link.classList.add('.add('active');
-                }
-            });
-active');
-                }
-        });
+    </main>
 
-        //            });
-        });
-
- Function to        // Function to upload upload profile picture
-        function profile picture
-        function uploadProfilePicture() uploadProfilePicture() {
-            {
-            const input const input = document.createElement(' = document.createElement('input');
-            inputinput');
+    <script>
+        // interactive profile pic upload (minor playful)
+        document.getElementById('profile-pic')?.addEventListener('click', function() {
+            const input = document.createElement('input');
             input.type = 'file';
-           .type = 'file';
- input.ac            input.accept = 'imagecept = 'image/*';
-/*';
-            
-                       
-            input.on input.onchangechange = function(event = function(event) {
-                const) {
-                const file = event.target file = event.target.files.files[0[0];
-               ];
-                if (file) if (file) {
-                    {
-                    const reader const reader = new = new FileReader FileReader();
-                    reader.onload =();
-                    reader.onload = function(e function(e) {
-                        document.getElementById(') {
-                        document.getElementById('profile-pprofile-picture').src = eicture').src = e.target.target.result;
+            input.accept = 'image/*';
+            input.onchange = e => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(ev) {
+                        document.getElementById('profile-pic').src = ev.target.result;
                     };
-.result;
-                    };
-                    reader.readAs                    reader.readAsDataURLDataURL(file);
-(file);
+                    reader.readAsDataURL(file);
                 }
             };
-                }
-            };
-            
-            input.click            
             input.click();
-       ();
-        }
-
-        }
-
-        // Make // Make profile picture profile picture clickable clickable for upload for upload
-       
-        document.getElementById('profile document.getElementById('profile-picture').add-picture').addEventListener('click', uploadProfilePicture);
-EventListener('click', uploadProfilePicture);
-        document.getElementById('profile-p        document.getElementById('profile-picture').icture').style.cstyle.cursor =ursor = 'pointer';
-        'pointer';
-        document.getElementById document.getElementById('profile('profile-picture').title = '-picture').title = 'Click to upload yourClick to upload your photo';
-        
-        photo';
-        
-        // Resume download functionality // Resume download functionality
-        document.querySelector
-        document.querySelector('.('.btn-download').addbtn-download').addEventListener('click',EventListener('click', function(e) {
- function(e) {
-            // The            // The download attribute in download attribute in the HTML the HTML should handle the download should handle the download
-           
-            // This // This is just is just a a fallback in case there's an issue
- fallback in case there's an issue
-            if (!this            if (!this.get.getAttribute('Attribute('download'))download')) {
-                {
-                e.preventDefault e.preventDefault();
-                alert('();
-                alert('Please make sure yourPlease make resume file sure your resume file is is named "Balakumar named "Balakumar_Cv.pdf"_Cv.pdf" and placed in the same directory and placed in the as this same directory as this HTML file.');
-            HTML file.');
-            }
-        }
         });
-        
- });
-        
-        //        // Count projects Count projects dynamically
- dynamically
-        document.addEventListener('DOMContent        document.addEventListener('Loaded',DOMContentLoaded', function() function() {
-            {
-            const projectCards = document.querySelector const projectCards = document.querySelectorAll('.project-cardAll('.project-card');
-           ');
-            document.getElementById('project-count document.getElementById('project').-count').textContenttextContent = projectCards.length;
-        = projectCards.length;
-        });
-    </script });
+
+        // optional counter (just for demo)
+        console.log('portfolio aligned with CV');
     </script>
-</>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
