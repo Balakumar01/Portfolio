@@ -306,7 +306,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
             gap: 24px;
-            margin: 30px 0;
+            margin: 30px 0 20px 0;
         }
 
         .project-card {
@@ -456,6 +456,11 @@
             margin: 30px 0;
         }
 
+        /* spacing between sections */
+        .section-spacer {
+            margin-top: 60px;
+        }
+
         /* small */
         @media (max-width: 700px) {
             .hero-grid { flex-direction: column-reverse; }
@@ -463,7 +468,7 @@
             .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
-</hEad>
+</head>
 <body>
     <header>
         <div class="container navbar">
@@ -609,22 +614,103 @@
             </div>
         </div>
 
+        <!-- ADDITIONAL SPACER: extra margin between Work Experience and Projects section -->
+        <div class="container section-spacer"></div>
+
         <!-- PROJECTS (full list from CV page 2) with icons & matching descriptions -->
         <div class="container" id="projects">
             <h2 class="section-title"><i class="fas fa-code-branch"></i>Key projects & utilities</h2>
             <div class="projects-grid">
-                <div class="project-card"><div class="project-icon"><i class="fas fa-file-excel"></i></div><h3>Mortgage QC Automation</h3><p>Reduced review time by 10 minutes per file using Excel macros (VBA). Automated validation for mortgage files.</p><div class="project-tags"><span class="tag">VBA</span><span class="tag">Excel</span><span class="tag">QC</span>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-chart-pie"></i></div><h3>Zoho Desk Reporting</h3><p>Built automated reporting from Zoho Desk for real‑time insights on ticket metrics and team performance.</p><div class="project-tags"><span class="tag">Zoho</span><span class="tag">Excel</span><span class="tag">automation</span></div><div</div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-dashboard"></i></div><h3>Power BI KPI Dashboards</h3><p>Developed interactive dashboards tracking ops KPIs, TAT, and productivity for leadership reviews.</p><div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span></div><div</a></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-database"></i></div><h3>SQL Sales Analysis</h3><p>Created database & queries for regional performance insights (JOINs, GROUP BY, filters).</p><div class="project-tags"><span class="tag">SQL</span><span class="tag">MySQL</span></div><div class="project-links"><a href="https://github.com/Balakumar01/SQL/blob/main/SQL%20CODES"><i class="fab fa-github"></i> Scripts</a></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-robot"></i></div><h3>AI Sheet Automation</h3><p>Reduced monthly effort by 6 hours by automating data consolidation with Python & Excel.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">OpenPyXL</span></div><div class="project-links"><a href="https://github.com/Balakumar01/Python_"><i class="fab fa-github"></i> code</a></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-cut"></i></div><h3>PDF splitter / merger</h3><p>Built browser‑based PDF splitter & merger using JavaScript (PDF.js). Internal utility tool.</p><div class="project-tags"><span class="tag">JavaScript</span><span class="tag">PDF.js</span></div><div class="project-links"><a href="https://balakumar01.github.io/PDF_SPLITTER/PDF_SPLITTER.html"><i class="fas fa-external-link-alt"></i> Live</a></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-file-signature"></i></div><h3>Excel merger application</h3><p>Drag‑drop multiple Excel files, merge columns, mapping. Built with ExcelJS.</p><div class="project-tags"><span class="tag">JS</span><span class="tag">ExcelJS</span></div><div class="project-links"><a href="https://balakumar01.github.io/Excel_Merger/Excel_Merger.html"><i class="fas fa-external-link-alt"></i> try</a></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-chart-line"></i></div><h3>Descriptive analysis app</h3><p>Interactive stats (mean, median, charts) from uploaded CSV. built with Chart.js.</p><div class="project-tags"><span class="tag">JS</span><span class="tag">Chart.js</span></div><div class="project-links"><a href="https://balakumar01.github.io/Descripitive_Analysis/descriptive.html"><i class="fas fa-external-link-alt"></i> demo</a></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-envelope-open-text"></i></div><h3>Auto email system (VBA)</h3><p>Macro reads Zoho Desk report, highlights blanks & auto‑emails users about missing entries.</p><div class="project-tags"><span class="tag">VBA</span><span class="tag">Outlook</span></div><div class="project-links"></div></div>
-                <div class="project-card"><div class="project-icon"><i class="fas fa-terminal"></i></div><h3>Batch script utilities</h3><p>Collection of batch scripts for task automation & system maintenance.</p><div class="project-tags"><span class="tag">batch</span></div><div class="project-links"><a href="https://github.com/Balakumar01/Batch-Script"><i class="fab fa-github"></i> repo</a></div></div>
+                <!-- Mortgage QC Automation (no view code) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>Mortgage QC Automation</h3>
+                    <p>Reduced review time by 10 minutes per file using Excel macros (VBA). Automated validation for mortgage files.</p>
+                    <div class="project-tags"><span class="tag">VBA</span><span class="tag">Excel</span><span class="tag">QC</span></div>
+                    <!-- no links: removed view code -->
+                </div>
+                
+                <!-- Zoho Desk Reporting (no view code) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Zoho Desk Reporting</h3>
+                    <p>Built automated reporting from Zoho Desk for real‑time insights on ticket metrics and team performance.</p>
+                    <div class="project-tags"><span class="tag">Zoho</span><span class="tag">Excel</span><span class="tag">automation</span></div>
+                    <!-- no links: removed view code -->
+                </div>
+                
+                <!-- Power BI KPI Dashboards (no view code) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-dashboard"></i></div>
+                    <h3>Power BI KPI Dashboards</h3>
+                    <p>Developed interactive dashboards tracking ops KPIs, TAT, and productivity for leadership reviews.</p>
+                    <div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span></div>
+                    <!-- no links: removed view code -->
+                </div>
+                
+                <!-- SQL Sales Analysis (has GitHub scripts link) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-database"></i></div>
+                    <h3>SQL Sales Analysis</h3>
+                    <p>Created database & queries for regional performance insights (JOINs, GROUP BY, filters).</p>
+                    <div class="project-tags"><span class="tag">SQL</span><span class="tag">MySQL</span></div>
+                    <div class="project-links"><a href="https://github.com/Balakumar01/SQL/blob/main/SQL%20CODES"><i class="fab fa-github"></i> Scripts</a></div>
+                </div>
+                
+                <!-- AI Sheet Automation (has GitHub code) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Sheet Automation</h3>
+                    <p>Reduced monthly effort by 6 hours by automating data consolidation with Python & Excel.</p>
+                    <div class="project-tags"><span class="tag">Python</span><span class="tag">OpenPyXL</span></div>
+                    <div class="project-links"><a href="https://github.com/Balakumar01/Python_"><i class="fab fa-github"></i> code</a></div>
+                </div>
+                
+                <!-- PDF splitter / merger (has live demo) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-cut"></i></div>
+                    <h3>PDF splitter / merger</h3>
+                    <p>Built browser‑based PDF splitter & merger using JavaScript (PDF.js). Internal utility tool.</p>
+                    <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">PDF.js</span></div>
+                    <div class="project-links"><a href="https://balakumar01.github.io/PDF_SPLITTER/PDF_SPLITTER.html"><i class="fas fa-external-link-alt"></i> Live</a></div>
+                </div>
+                
+                <!-- Excel merger application (has live demo) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>Excel merger application</h3>
+                    <p>Drag‑drop multiple Excel files, merge columns, mapping. Built with ExcelJS.</p>
+                    <div class="project-tags"><span class="tag">JS</span><span class="tag">ExcelJS</span></div>
+                    <div class="project-links"><a href="https://balakumar01.github.io/Excel_Merger/Excel_Merger.html"><i class="fas fa-external-link-alt"></i> try</a></div>
+                </div>
+                
+                <!-- Descriptive analysis app (has live demo) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Descriptive analysis app</h3>
+                    <p>Interactive stats (mean, median, charts) from uploaded CSV. built with Chart.js.</p>
+                    <div class="project-tags"><span class="tag">JS</span><span class="tag">Chart.js</span></div>
+                    <div class="project-links"><a href="https://balakumar01.github.io/Descripitive_Analysis/descriptive.html"><i class="fas fa-external-link-alt"></i> demo</a></div>
+                </div>
+                
+                <!-- Auto email system (VBA) (no links) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3>Auto email system (VBA)</h3>
+                    <p>Macro reads Zoho Desk report, highlights blanks & auto‑emails users about missing entries.</p>
+                    <div class="project-tags"><span class="tag">VBA</span><span class="tag">Outlook</span></div>
+                </div>
+                
+                <!-- Batch script utilities (has GitHub repo) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>Batch script utilities</h3>
+                    <p>Collection of batch scripts for task automation & system maintenance.</p>
+                    <div class="project-tags"><span class="tag">batch</span></div>
+                    <div class="project-links"><a href="https://github.com/Balakumar01/Batch-Script"><i class="fab fa-github"></i> repo</a></div>
+                </div>
             </div>
-            <div style="text-align: right; opacity:0.7; margin-top:-10px">Total projects displayed: 10+ (including internal tools)</div>
+            <div style="text-align: right; opacity:0.7; margin-top: 10px;">Total projects displayed: 10+ (including internal tools)</div>
         </div>
 
         <!-- ACHIEVEMENTS & CERTIFICATIONS (from CV) -->
@@ -699,7 +785,7 @@
         });
 
         // optional counter (just for demo)
-        console.log('portfolio aligned with CV');
+        console.log('portfolio aligned with CV — spacing added and view buttons removed from specific projects');
     </script>
 </body>
 </html>
